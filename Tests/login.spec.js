@@ -5,7 +5,7 @@ const { LoginPage } = require('../pages/LoginPage');
 const loginData = [
   {
     email: 'souravsusari311@gmail.com',
-    password: 'Edvak@456',
+    password: 'Edvak@3210',
   },
 ];
 
