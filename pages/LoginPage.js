@@ -7,7 +7,7 @@ class LoginPage {
       this.page = page;
       this.emailInput = page.locator('input[placeholder="Email address"]');
       this.passwordInput = page.locator('input[placeholder="Password"]');
-      this.loginButton = page.locator('#btnLogin'); 
+      this.loginButton = page.locator('#content-area > app-login > section > div > div > form > div.text-center.mb-3 > sl-button'); 
       this.userIcon = page.locator('#Logout-container > button');
       this.logoutButton = page.locator('text=Logout');
       this.edvakLogo = page.locator('img.w-52.mb-md');
@@ -26,7 +26,7 @@ class LoginPage {
         await this.emailInput.fill(email);
         await this.passwordInput.fill(password);
       
-        // Robust click on standard Login button
+       
         await this.page.getByRole('button', { name: 'Login' }).click();
       }
   
