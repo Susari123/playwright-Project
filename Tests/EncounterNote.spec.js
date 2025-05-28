@@ -3,8 +3,8 @@ const { EncounterNotes } = require('../pages/EncounterNotes');
 
 const loginData = [
   {
-    email: 'souravsusari311@gmail.com',
-    password: 'Edvak@3210',
+    email: 'edvakhealth@ehr.com',
+    password: 'Edvak@123456',
   },
 ];
 
@@ -14,7 +14,7 @@ test.describe('Encounter Notes EHR Registration Tests', () => {
       const encounterNotes = new EncounterNotes(page);  
 
       try {
-        await page.goto('https://darwinapi.edvak.com/auth/login', { timeout: 60000 }); 
+        await page.goto('https://ehr.edvak.com/auth/login', { timeout: 60000 }); 
         await encounterNotes.performLogin(email, password); 
         await page.waitForTimeout(4000);  
         await encounterNotes.encounterNote();

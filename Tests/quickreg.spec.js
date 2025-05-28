@@ -4,8 +4,8 @@ const { QuickReg } = require('../pages/QuickReg');
 // Define test users & patient data
 const loginData = [
   {
-    email: 'souravsusari311@gmail.com',
-    password: 'Edvak@3210',
+    email: 'edvakhealth@ehr.com',
+    password: 'Edvak@123456',
     patient: {
       firstName: 'Sourav',
       lastName: 'Susari',
@@ -27,7 +27,7 @@ test.describe('QuickReg EHR Registration Tests', () => {
       const quickReg = new QuickReg(page);
 
       try {
-        await page.goto('https://darwinapi.edvak.com/auth/login');
+        await page.goto('https://ehr.edvak.com/auth/login');
         await quickReg.performLogin(email, password);
         await quickReg.registerPatient(patient);
       } catch (error) {
